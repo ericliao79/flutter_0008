@@ -17,7 +17,9 @@ void main() {
   testWidgets('Counter increments smoke test', (WidgetTester tester) async {
 
     String jsonUserData =
-        "{\"users\":[{\"name\":\"p1\",\"assets_name\":\"assets\/icons\/icon_user.jpg\"},{\"name\":\"p1\",\"assets_name\":\"assets\/icons\/icon_user.jpg\"},{\"name\":\"p1\",\"assets_name\":\"assets\/icons\/icon_user.jpg\"},{\"name\":\"p1\",\"assets_name\":\"assets\/icons\/icon_user.jpg\"},{\"name\":\"p1\",\"assets_name\":\"assets\/icons\/icon_user.jpg\"}]}";
+        "{\"users\":[{\"name\":\"p1\",\"assets_name\":\"assets\/icons\/icon_user.jpg\", \"id\": \"100\"},"
+        "{\"name\":\"p1\",\"assets_name\":\"assets\/icons\/icon_user.jpg\"},{\"name\":\"p1\",\"assets_name\":\"assets\/icons\/icon_user.jpg\"},"
+        "{\"name\":\"p1\",\"assets_name\":\"assets\/icons\/icon_user.jpg\"},{\"name\":\"p1\",\"assets_name\":\"assets\/icons\/icon_user.jpg\"}]}";
 
     List<User> _users =[];
 

@@ -4,7 +4,10 @@ part 'user.g.dart';
 
 @JsonSerializable()
 class User {
-  User(this.name, this.assetsName);
+  User(this.id, this.name, this.assetsName);
+
+  @JsonKey(name: 'id', fromJson: _stringToInt, toJson: _stringFromInt)
+  int? id;
 
   String name;
 
@@ -12,6 +15,10 @@ class User {
   String assetsName;
 
   factory User.fromJson(Map<String, dynamic> json) => _$UserFromJson(json);
-  /// Connect the generated [_$PersonToJson] function to the `toJson` method.
+
   Map<String, dynamic> toJson() => _$UserToJson(this);
+
+  static int? _stringToInt(String? id) => int.tryParse(id ?? "");
+
+  static String _stringFromInt(int? id) => id.toString();
 }
